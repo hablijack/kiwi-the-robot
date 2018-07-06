@@ -1,1 +1,3 @@
 adafruit-pca9685
+pexpect
+tornado

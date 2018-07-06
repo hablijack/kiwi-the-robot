@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="favicon" href="/static/img/favicon.ico">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/static/css/jquery.fullpage.min.css" />
+		<link rel="stylesheet" href="/static/css/normalize.css">
+		<link rel="stylesheet" href="/static/css/main.css">
+
+		<script src="/static/js/vendor/nipplejs.min.js"></script>
+		<script src="/static/js/vendor/modernizr-2.8.3.min.js"></script>
+		<script src="/static/js/vendor/jquery-1.12.0.min.js"></script>
+		<script src="/static/js/vendor/jquery.fullpage.min.js"></script>
+		<script src="/static/js/plugins.js"></script>
+		<script src="/static/js/main.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<div id="container">
+			<div id="fullpage">
+				<div class="section">
+				
+					<div class="slide" data-anchor="home">
+						<h1>Kiwi</h1>
+						<img class="homepagelogo" src="img/logo.png">
+						
+						<span class="robotinfo">Hello! I'm Kiwi, your smart desk-pet :)</span>
+						
+					</div>
+					<div class="slide" data-anchor="control">
+						<div id="movement_joystick_zone">
+							<span class="control_description">Body</span>
+						</div>
+						<div id="eye_joystick_zone">
+							<span class="control_description">Head</span>
+						</div>
+					</div>
+					<div class="slide" data-anchor="sound">
+						<h1>Soundboard</h1>
+						<div id="soundboard">
+							<button class="soundbtn" value="initialize">initialize</button>
+							<button class="soundbtn" value="alarm">alarm</button>
+							<button class="soundbtn" value="alarm_reverb">alarm_reverb</button>
+							<button class="soundbtn" value="angry">angry</button>
+							<button class="soundbtn" value="behind">behind</button>
+							<button class="soundbtn" value="busy_busy_busy">Busy Busy</button>
+							<button class="soundbtn" value="caution">caution</button>
+							<button class="soundbtn" value="chat_reverb">chat_reverb</button>
+							<button class="soundbtn" value="chatter_raz">chatter_raz</button>
+							<button class="soundbtn" value="chuckle_raz">chuckle_raz</button>
+							<button class="soundbtn" value="chunter">chunter</button>
+							<button class="soundbtn" value="clanger2_reverb">clanger2_reverb</button>
+							<button class="soundbtn" value="cuckoo">cuckoo</button>
+							<button class="soundbtn" value="ditty">ditty</button>
+							<button class="soundbtn" value="error">error</button>
+							<button class="soundbtn" value="fast_chat">fast_chat</button>
+							<button class="soundbtn" value="fast_talk">fast_talk</button>
+							<button class="soundbtn" value="info">info</button>
+							<button class="soundbtn" value="lockout_reverb">lockout_reverb</button>
+							<button class="soundbtn" value="plea">plea</button>
+							<button class="soundbtn" value="process">process</button>
+							<button class="soundbtn" value="process2">process2</button>
+							<button class="soundbtn" value="process4">process4</button>
+							<button class="soundbtn" value="processing_holo">processing_holo</button>
+							<button class="soundbtn" value="raz">raz</button>
+							<button class="soundbtn" value="short_circuit">short_circuit</button>
+							<button class="soundbtn" value="skipping_raz">skipping_raz</button>
+							<button class="soundbtn" value="surprise">surprise</button>
+							<button class="soundbtn" value="tum_de_dum">tum_de_dum</button>
+							<button class="soundbtn" value="tuneful_chatter">tuneful_chatter</button>
+							<button class="soundbtn" value="whistle">whistle</button>
+							<button class="soundbtn" value="whistling_process">whistling_process</button>
+							<button class="soundbtn" value="wolfwhistle">wolfwhistle</button>
+							<button class="soundbtn" value="worry">worry</button>
+							<button class="soundbtn" value="worry_2">worry_2</button>
+							<button class="soundbtn" value="wow">wow</button>
+							<button class="soundbtn" value="zaap">zaap</button>
+						</div>
+					</div>
+					<div class="slide" data-anchor="microphone">
+						<h1>Kiwi Settings</h1>
+						<span class="robotinfo">Watch out! Here you can configure me...</span>
+						<div class="">
+							<div class="control_description">LED Color: </div>
+							<input type='color' name='ringcolor' id="ringcolor" value='#3355cc' />
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<nav>
+
+			<div id="head_movement_control">
+				<button>&lt;</button>
+				<button>&gt;</button>
+			</div>
+
+			<ul class="nav">
+				<li>
+					<a href="#action/home">
+						<span class="fa fa-home icon-home"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#action/control">
+						<span class="fa fa-arrows"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#action/sound">
+						<span class="fa fa-volume-up"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#action/microphone">
+						<span class="fa fa-cog"></span>
+					</a>
+				</li>
+			</ul>
+		</nav>​
+
+		<img id="camera" src="/static/img/bg_picture.jpg">
+	</body>
+</html>
