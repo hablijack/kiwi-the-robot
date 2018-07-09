@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background: #eee;
+  font-family: arial;
+}
+
+#movement_joystick_zone {
+   width: 70%;
+   height: 70%;
+   position: relative;
+   background-color: green;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 30px;
+   background: url("http://via.placeholder.com/800x600");
+   background-repeat: no-repeat;
+   background-size: cover;
+   border: 1px dotted black;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+  display: none;
+  background: #eff0f1;
+  cursor: hand;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  cursor: grab;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+h1 {
+  font-family: 'Knewave', cursive;
+  font-size: 3.5vw;
+  color: #6B2F1B;
+  font-weight: normal;
+}
+
+.dragend-page {
+  text-align: center;
+}
+
+.button {
+  height: 0;
+  width: 0;
+  position: absolute;
+  cursor: pointer;
+  border-style: solid;
+}
+
+.button.deactivated {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.prev {
+  border-width: 50px 50px 50px 0;
+  border-color: transparent #6B2F1B transparent transparent;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-left: 20px;
+}
+
+.next {
+  border-width: 50px 0 50px 50px;
+  border-color: transparent transparent transparent #6B2F1B;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-right: 20px;
+}
+
+.nav {
+  list-style: none;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  height: 42px;
+  background-color: #6B2F1B;
+}
+
+.nav li.active {
+  background: #eff0f1;
+  color: #6B2F1B;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.nav li {
+  font-family: 'Arial';
+  font-weight: bold;
+  width: 20%;
+  float: left;
+  text-align: center;
+  background: #6B2F1B;
+  line-height: 35px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.nav li:last-child {
+  border-right: 0;
+}

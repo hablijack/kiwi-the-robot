@@ -18,8 +18,8 @@ class WebServer():
 
     def serve(self):
         settings = dict(
-            template_path=rel('../web/templates'),
-            static_path=rel('../web/static'),
+            template_path=rel('./web/templates'),
+            static_path=rel('./web'),
             debug=True
         )
         app = Application([
