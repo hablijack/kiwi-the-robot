@@ -2,17 +2,16 @@
 # -*- coding: utf-8 -*-
 
 import tornado
-from servo import Servo
-from sound_effect import SoundEffect
-from webserver import WebServer
-from lib.logger import Logger
+from kiwi import Kiwi
+from server.webserver import WebServer
 
 
 if __name__ in '__main__':
-    Logger.log('Initializing KIWI KI, press Ctrl-C to quit...')
-    SoundEffect.play('hello')
-    webserver = WebServer().serve()
+    kiwi = Kiwi('command')
+    kiwi.start_to_exist()
+    WebServer(kiwi).serve()
     tornado.ioloop.IOLoop.current().start()
+
 
     #xServo = Servo(0, 'xServo', _zero=101)
     #yServo = Servo(1, 'yServo', _zero=101)

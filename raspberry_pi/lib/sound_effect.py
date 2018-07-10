@@ -14,7 +14,7 @@ class SoundEffect:
 
     @staticmethod
     def play(emotion):
-        player = Player(os.path.dirname(os.path.realpath(__file__)) + "/sounds/" + emotion + ".mp3")
+        player = Player(os.path.dirname(os.path.realpath(__file__)) + "/../sounds/" + emotion + ".mp3")
         stdout = player.playback
         if player.audio_player == 'omxplayer':
             stdout.expect(re.compile(b"have a nice day.*"))
