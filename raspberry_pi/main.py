@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-
 import tornado
 from servo import Servo
 from sound_effect import SoundEffect
@@ -11,9 +10,8 @@ from lib.logger import Logger
 
 if __name__ in '__main__':
     Logger.log('Initializing KIWI KI, press Ctrl-C to quit...')
-    #SoundEffect.play('uh_huh')
-    webserver = WebServer()
-    webserver.serve()
+    SoundEffect.play('hello')
+    webserver = WebServer().serve()
     tornado.ioloop.IOLoop.current().start()
 
     #xServo = Servo(0, 'xServo', _zero=101)

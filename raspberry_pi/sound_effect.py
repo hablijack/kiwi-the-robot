@@ -14,9 +14,13 @@ class SoundEffect:
 
     @staticmethod
     def play(emotion):
-        p = Player(os.path.dirname(os.path.realpath(__file__)) + "/../sounds/" + emotion + "mp3").playback
-        p.expect(re.compile(b"have a nice day.*"))
-        return p
+        player = Player(os.path.dirname(os.path.realpath(__file__)) + "/sounds/" + emotion + ".mp3")
+        stdout = player.playback
+        if player.audio_player == 'omxplayer':
+            stdout.expect(re.compile(b"have a nice day.*"))
+        else:
+            stdout.expect(re.compile(b"Exiting.*"))
+        return player
 
 
 class Player:
@@ -24,8 +28,10 @@ class Player:
     def __init__(self, file):
         if self.omxplayer_exists():
             self.playback = pexpect.spawn("/usr/bin/omxplayer -o local --no-keys " + file)
+            self.audio_player = 'omxplayer'
         else:
             self.playback = pexpect.spawn("/usr/bin/mplayer " + file)
+            self.audio_player = 'mplayer'
 
     def terminate(self):
         if self.playback and self.playback.isalive():
