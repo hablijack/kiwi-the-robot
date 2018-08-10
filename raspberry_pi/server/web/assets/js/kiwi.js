@@ -19,6 +19,8 @@ $(".nav").click(function(event) {
 });
 
 function renderPage(event) {
+  $(".nav").fadeIn('slow')
+
   $("#content").dragend({
     onSwipeEnd: function() {
       var first = this.pages[0],
@@ -43,5 +45,5 @@ function renderPage(event) {
     	});
 
     }
-  }).fadeIn();
+  }).fadeIn('slow');
 }

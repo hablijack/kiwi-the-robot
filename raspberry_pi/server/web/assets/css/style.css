@@ -89,6 +89,7 @@ h1 {
   bottom: 0px;
   height: 42px;
   background-color: #6B2F1B;
+  display: none;
 }
 
 .nav li.active {
