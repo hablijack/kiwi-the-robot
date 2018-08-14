@@ -22,7 +22,7 @@ class Kiwi():
     def set_operation_mode(self, mode, command=None):
         Logger.log('Received order for operation-mode change. Going to: ' + mode + ' mode...')
         self.operation_mode = mode
-        self.command_to_execute = command_to_execute
+        self.command_to_execute = command
 
     @gen.coroutine
     def start_to_exist(self):

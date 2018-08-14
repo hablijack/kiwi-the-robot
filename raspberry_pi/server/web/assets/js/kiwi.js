@@ -18,6 +18,13 @@ $(".nav").click(function(event) {
   $(event.target).addClass("active");
 });
 
+
+function sendIndependantMode(independant_flag) {
+  $.post('/independant?independant=' + independant_flag, function() {
+
+  });
+}
+
 function renderPage(event) {
   $(".nav").fadeIn('slow')
 
@@ -37,13 +44,22 @@ function renderPage(event) {
         $(".next").addClass("deactivated")
       }
       $(".nav li").eq(this.page).addClass("active");
-
-      var movementJoystick = nipplejs.create({
-    		zone: document.getElementById('movement_joystick_zone'),
-    		color: 'red',
-        mode: 'dynamic'
-    	});
-
     }
   }).fadeIn('slow');
+
+  $('[for="trigger"]').on("click", function(e) {
+    var checkbox = $("#independant_switch");
+    var checked = checkbox.is(":checked");
+    if(checked) {
+      checkbox.removeAttr('checked');
+    } else {
+      checkbox.attr('checked', 'checked');
+    }
+    sendIndependantMode(!checked);
+  });
+  var movementJoystick = nipplejs.create({
+    zone: document.getElementById('movement_joystick_zone'),
+    color: 'red',
+    mode: 'dynamic'
+  });
 }

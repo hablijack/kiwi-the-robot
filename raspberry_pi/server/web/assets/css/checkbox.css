@@ -29,7 +29,7 @@
 }
 
 .switch input {
-	display: none;
+	visibility: hidden;
 }
 
 .switch span {

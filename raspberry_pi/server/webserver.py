@@ -28,10 +28,10 @@ class WebServer():
         )
         app = Application([
             (r"/", Homepage, dict(kiwi=self.kiwi)),
-            (r"/emotion", Emotions),
-            (r"/freehand", Freehand),
-            (r"/independant", Independant),
-            (r"/settings", Settings),
+            (r"/emotion", Emotions, dict(kiwi=self.kiwi)),
+            (r"/freehand", Freehand, dict(kiwi=self.kiwi)),
+            (r"/independant", Independant, dict(kiwi=self.kiwi)),
+            (r"/settings", Settings, dict(kiwi=self.kiwi)),
         ], **settings)
 
         http_server = tornado.httpserver.HTTPServer(app)
